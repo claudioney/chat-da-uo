@@ -2508,3 +2508,12 @@ If you're seeing this error, you're likely using an old version of `react-script
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebook/create-react-app/issues) or [contribute some!](https://github.com/facebook/create-react-app/edit/master/packages/react-scripts/template/README.md)
+
+
+
+npm install -g create-react-app@1.5.2
+
+docker run --rm -v /$(pwd):/usr/src/app node sh -c "cd /usr/src/app && npm install -gdocker run --rm -v /$(pwd):/usr/src/app node sh -c "cd /usr/src/app && npm install -gdocker run --rm -v /$(pwd):/usr/src/app node sh -c "cd /usr/src/app && npm install -g create-react-app@1.5.2 && create-react-app chat-da-uo"
+
+
+winpty docker run -it -p 3000:3000 -v /$(pwd):/usr/src/app node bash
