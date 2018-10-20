@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import AppBar from '@material-ui/core/AppBar';
-import ToolBar from '@material-ui/core/ToolBar';
+//import ToolBar from '@material-ui/core/ToolBar';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -13,11 +13,9 @@ class App extends Component{
     return(
 	  	<div>
 	  	<AppBar position='static' color='default'>
-	  	<ToolBar>
 	  	   <Typography type='title' color='inherit'>
 	  	 	  Adicione qualquer mensagem aqui
 	  	   </Typography>
-	  	 </ToolBar>
 	  	 </AppBar>
 	  	 <ChatRoom/>
 		</div>
