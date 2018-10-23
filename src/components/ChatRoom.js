@@ -17,7 +17,6 @@ var config = {
 var fbase = firebase.initializeApp(config);
 
 
-
 class ChatRoom extends Component {
     constructor(){
     	super();
