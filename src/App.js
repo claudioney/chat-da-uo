@@ -6,7 +6,7 @@ class App extends Component{
  render(){
     return(
 	  	<div>
-	  	 	  Adicione qualquer mensagem aqui
+	  	 	Adicione qualquer mensagem aqui!
 	  	 <ChatRoom/>
 		</div>
     )
