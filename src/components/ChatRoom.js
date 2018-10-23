@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-//import TextField from '@material-ui/core/TextField';
-//import Button from '@material-ui/core/Button';
-
 import firebase from '@firebase/app';
 import '@firebase/database';
 
@@ -23,18 +20,12 @@ class ChatRoom extends Component {
     	this.state = {
     		message: '',
     		messages:[
-//    		 {id:0, text: 'texto 1'},
-//    		 {id:1, text: 'texto 2'},
-//    		 {id:2, text: 'texto 3'},
-//    		 {id:3, text: 'texto 5'},
     		 ]
     	}
     }
 
     updateMessage(e){
-    	//console.log(e.target.value);
     	this.setState({message: e.target.value});
-    	//console.log(this.state.message);
     }
 
     componentDidMount(){
@@ -51,13 +42,10 @@ class ChatRoom extends Component {
 
     hadndleSubmit(e){
     	e.preventDefault();
-//    	const list = this.state.messages;
     	const newMessage = {
     		id: this.state.messages.length,
     		text: this.state.message,
     	}
-//    	list.push(newMessage);
-//    	this.setState({messages: list});
 		fbase.database().ref('messages/'+newMessage.id)
 			.set(newMessage);
     	this.setState({message: ''});
