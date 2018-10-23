@@ -3,6 +3,21 @@ import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+import firebase from '@firebase/app';
+import '@firebase/database';
+
+var config = {
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID
+  };
+var fbase = firebase.initializeApp(config);
+
+
+
 class ChatRoom extends Component {
     constructor(){
     	super();
@@ -24,7 +39,7 @@ class ChatRoom extends Component {
     }
 
     componentDidMount(){
-    	window.firebase.database().ref('messages/').on('value', snap =>{
+    	fbase.database().ref('messages/').on('value', snap =>{
     		const currentMessages = snap.val();
     		if(currentMessages !== null){
     			this.setState({
@@ -44,7 +59,7 @@ class ChatRoom extends Component {
     	}
 //    	list.push(newMessage);
 //    	this.setState({messages: list});
-		window.firebase.database().ref('messages/'+newMessage.id)
+		fbase.database().ref('messages/'+newMessage.id)
 			.set(newMessage);
     	this.setState({message: ''});
     }
