@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+//import TextField from '@material-ui/core/TextField';
+//import Button from '@material-ui/core/Button';
 
 import firebase from '@firebase/app';
 import '@firebase/database';
@@ -77,12 +77,12 @@ class ChatRoom extends Component {
 			</ol>
 
 			<form onSubmit={this.hadndleSubmit.bind(this)}>
-			  <TextField
+			  <input
 			    type="text"
 			    value={this.state.message}
 			    onChange={this.updateMessage.bind(this)}
 			  />
-			  <Button>enviar</Button>
+			  <button>enviar</button>
 			</form>
 		</div>
 	  )
