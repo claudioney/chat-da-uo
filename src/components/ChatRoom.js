@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import firebase from '@firebase/app';
 import '@firebase/database';
+import 'materialize-css/dist/css/materialize.min.css';
 
 var config = {
     apiKey: process.env.REACT_APP_FIREBASE_KEY,
@@ -55,22 +56,24 @@ class ChatRoom extends Component {
 
 	  const {messages} = this.state;
 	  const messagesList = messages.map(message => {
-		 		return <li key={message.id}>{message.text}</li>
+		 		return <div> <li key={message.id.toString()} className="collection-item">{message.text}</li> </div>
 	  });
 
 	  return (
 	  	<div>
-		  	<ol>
+		  	<ul className="collection with-header">
+                <li className="collection-header"><h3>Mensagens</h3></li>
 			 	{messagesList}
-			</ol>
+			</ul>
 
 			<form onSubmit={this.hadndleSubmit.bind(this)}>
-			  <input
+			  <input 
+                id="icon_message"
 			    type="text"
 			    value={this.state.message}
 			    onChange={this.updateMessage.bind(this)}
 			  />
-			  <button>enviar</button>
+			  <button className="btn waves-effect waves-light">enviar</button>
 			</form>
 		</div>
 	  )
