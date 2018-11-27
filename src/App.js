@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import 'materialize-css/dist/css/materialize.min.css';
 
+import { Link } from 'react-router-dom'
+
 class App extends Component{
  render(){
  	document.title = 'Mural de recados'
