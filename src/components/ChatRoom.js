@@ -53,16 +53,29 @@ class ChatRoom extends Component {
     }
 
 	render() {
-
 	  const {messages} = this.state;
 	  const messagesList = messages.map(message => {
-		 		return <div> <li key={message.id.toString()} className="collection-item">{message.text}</li> </div>
+		 		return (
+                    <div class="row">
+                        <div class="col">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                <span class="card-title">Card #{message.id.toString()}</span>
+                                {message.text}
+                                </div>
+                            </div>
+                        </div>
+                  </div>)
 	  });
 
 	  return (
 	  	<div>
+            <nav>
+                <div class="nav-wrapper">
+                  <div class="brand-logo">Recados</div>
+                </div>
+            </nav>
 		  	<ul className="collection with-header">
-                <li className="collection-header"><h3>Mensagens</h3></li>
 			 	{messagesList}
 			</ul>
 
