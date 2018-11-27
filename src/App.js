@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 import 'materialize-css/dist/css/materialize.min.css';
-
 import { Link } from 'react-router-dom'
+
 
 class App extends Component{
  render(){
@@ -15,8 +15,8 @@ class App extends Component{
 		    </div>
 		</nav>
 		<div class="collection">
-	        <a href="/sala" class="collection-item">Ir para a página de chat</a>
-	        <a href="/sobre" class="collection-item">Ir para a página sobre</a>
+	        <Link to="/sala" class="collection-item" >Ir para a página de chat</Link>
+	        <Link to="/sobre" class="collection-item" >Ir para a página sobre</Link>
       	</div>
 	</div>
     )
