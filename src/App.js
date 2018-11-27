@@ -15,10 +15,8 @@ class App extends Component{
 		    </div>
 		</nav>
 		<div class="collection">
-	        <a href="/sala" class="collection-item">Ir para a página de chat</a>
-	        <a href="/sobre" class="collection-item">Ir para a página sobre</a>
-	        <Link to="/sala">Pagina Inicial</Link>
-	        <Link to="/sobre">Pagina Inicial</Link>
+	        <Link to="/sala" class="collection-item" >Ir para a página de chat</Link>
+	        <Link to="/sobre" class="collection-item" >Ir para a página sobre</Link>
       	</div>
 	</div>
     )
