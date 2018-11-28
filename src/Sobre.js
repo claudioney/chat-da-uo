@@ -9,8 +9,8 @@ class Sobre extends Component{
 		    <div class="nav-wrapper">
 		      <div class="brand-logo">Sobre..</div>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-		        <li><a href="/">Inicio</a></li>
-		        <li><a href="/sala">Mural</a></li>
+		        <li><Link to="/">Inicio</Link></li>
+		        <li><Link to="/sala">Mural</Link></li>
       		</ul>
 		</div>
 		</nav>
